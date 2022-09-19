@@ -250,7 +250,7 @@
 .update-btn {
   color: #fff;
   height: 3.25rem;
-  width: 11.875rem;
+  width: 100%;
   border: none;
   border-radius: 0.625rem;
   background-color: #29a073;
@@ -332,6 +332,21 @@
 /* §§§§§§ Media  Queries §§§§§§ */
 /* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
 
+@media only screen and (max-width: 1280px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+
+    padding: 5px 1.5rem;
+
+    /* min-width: 450px; */
+  }
+  .settings-container {
+    overflow-y: auto;
+  }
+}
+
 @media only screen and (max-width: 860px) {
   .pp-container {
     display: flex;
@@ -342,14 +357,8 @@
   }
 }
 
-@media only screen and (max-width: 1280px) {
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    min-width: 450px;
-  }
-  .settings-container {
-    overflow-y: auto;
+@media only screen and (max-width: 480px) {
+  input {
+    font-size: 0.7rem;
   }
 }

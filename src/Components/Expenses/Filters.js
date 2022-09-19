@@ -31,7 +31,7 @@ export default function Filters(props) {
     >
       <button
         className={
-          props.displayFilters ? "category-btn" : "category-btn hidden"
+          props.displayFilters ? "category-btn nb" : "category-btn nb hidden"
         }
         name="title"
         disabled={!props.displayFilters}
@@ -46,14 +46,14 @@ export default function Filters(props) {
         className={
           props.displayFilters ? "category-btn" : "category-btn hidden"
         }
-        name="company"
+        name="category"
         disabled={!props.displayFilters}
         onClick={handleClick}
       >
         CATEGORY
         {props.displayFilters && (
           <img
-            src={sort[0] === "company" ? chevron : null}
+            src={sort[0] === "category" ? chevron : null}
             className={sort[1]}
           />
         )}
@@ -94,7 +94,7 @@ export default function Filters(props) {
         <>
           <button
             className={
-              props.displayFilters ? "category-btn" : "category-btn hidden"
+              props.displayFilters ? "category-btn recurring" : "category-btn recurring hidden"
             }
             name="recurring"
             disabled={!props.displayFilters}

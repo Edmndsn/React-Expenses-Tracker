@@ -269,7 +269,7 @@ export default function Settings(props) {
             </div>
 
             <div className="form-column">
-              <label className="labellabel-pass">Confirm Password</label>
+              <label className="label label-pass">Confirm Password</label>
               <div
                 className={
                   editSettings ? "pass-container-white" : "pass-container"

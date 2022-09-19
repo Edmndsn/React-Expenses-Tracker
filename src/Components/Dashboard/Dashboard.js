@@ -84,32 +84,32 @@ export default function Dashboard(props) {
         <div className="resume-container">
           <section className="amounts-tab">
             <div className="amount-itm-total">
-              <img src={greenWallet} alt="" />
+              <img src={greenWallet} alt="wallet-icon" />
               <div>
                 <p className="amount-title">Total Spending</p>
-                <h2 className="amount-value">{`${userDetails.currency}  ${totalSpending}`}</h2>
+                <h2 className="amount-value">{`${userDetails.currency}${totalSpending}`}</h2>
               </div>
             </div>
 
             <div className="amount-itm">
-              <img src={wallet} alt="" />
+              <img src={wallet} alt="wallet-icon2" />
               <div>
                 <p className="amount-title">Monthly Spending</p>
-                <h2 className="amount-value">{`${userDetails.currency}  ${monthlySpending}`}</h2>
+                <h2 className="amount-value">{`${userDetails.currency}${monthlySpending}`}</h2>
               </div>
             </div>
 
             <div className="amount-itm">
-              <img src={dailyWallet} alt="" />
+              <img src={dailyWallet} alt="wallet-icon3" />
               <div>
                 <p className="amount-title">Weekly Spending</p>
-                <h2 className="amount-value">{`${userDetails.currency}  ${weeklySpending}`}</h2>
+                <h2 className="amount-value">{`${userDetails.currency}${weeklySpending}`}</h2>
               </div>
             </div>
           </section>
 
           <div className="graph-container">
-            <h3 className="section-title">Working Capital</h3>
+            <h3 className="section-title">Outgoings</h3>
             <Chart />
           </div>
 
@@ -121,7 +121,7 @@ export default function Dashboard(props) {
                 onClick={() => navigate("expenses")}
               >
                 View All
-                <img src={expand} className="expand-icon" alt="" />
+                <img src={expand} className="expand-icon" alt="view-all-button" />
               </button>
             </div>
             <div className="filters-container">
@@ -136,7 +136,7 @@ export default function Dashboard(props) {
             <h3 className="section-title">Recurring Expenses</h3>
             <button className="expand-btn" onClick={() => navigate("expenses")}>
               View All
-              <img src={expand} className="expand-icon" alt="" />
+              <img src={expand} className="expand-icon" alt="view-all-button" />
             </button>
           </div>
 

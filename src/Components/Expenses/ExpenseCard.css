@@ -17,7 +17,7 @@
 
 .expense-dashboard > .card-element.name-business-container {
   gap: 0px !important;
-  max-width: 20ch;
+  /* max-width: 20ch; */
   display: flex;
   justify-content: center;
 }
@@ -31,10 +31,9 @@
   min-width: 50px;
 }
 
-.expense-dashboard > .card-element.amount {
+/* .expense-dashboard > .card-element.amount {
   border: none;
-  gap: 10px;
-}
+} */
 
 .expense-dashboard > .card-element > .selected-currency,
 .expense-dashboard > .card-element > .input {
@@ -62,7 +61,7 @@
   min-width: fit-content !important;
   padding-bottom: 10px !important;
   padding-top: 10px !important;
-  gap: 10px;
+  column-gap: 10px;
   border-top: 1px solid rgba(119, 119, 119, 0.1);
 }
 
@@ -76,14 +75,14 @@
   height: 50px;
 }
 
-.selected-currency-span {
+/* .selected-currency-span {
   width: 10px;
-}
+} */
 
-.expense-dashboard-recurring > .card-element.name-business-container {
+/* .expense-dashboard-recurring > .card-element.name-business-container {
   gap: 0px !important;
   width: 20ch;
-}
+} */
 
 .expense-dashboard-recurring > .category > .category-image-container {
   min-width: 50px;
@@ -93,12 +92,12 @@
 }
 
 .expense-dashboard-recurring > .card-element.amount.recurring {
-  width: 10ch;
+  /* width: 10ch; */
   justify-content: flex-end;
 }
 
 .expense-dashboard-recurring > .selected-currency {
-  width: 10ch;
+  /* width: 10ch; */
 }
 
 .expense-dashboard-recurring > .card-element > .expense-card-text,
@@ -115,11 +114,13 @@
 .card-element {
   display: flex;
   align-items: center;
+  /* justify-content: center; */
   border: none;
   outline: none;
   /* gap: 10px; */
   height: 40px;
-  min-width: 100%;
+  /* min-width: 100%; */
+  width: 100%;
 }
 
 .card-element {
@@ -153,6 +154,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   gap: 5px;
 }
 
@@ -186,13 +188,13 @@
 
 .amount {
   font-weight: 600;
+  padding: 0;
 }
 
 .card-element.checkbox {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* sort out cursor */
 }
 
 .expense-card-text.checkbox-input {
@@ -252,4 +254,48 @@
 
 .action-button.disabled:active {
   background: #c8ee44;
+}
+
+@media only screen and (max-width: 860px) {
+  .card-element,
+  .expense-card-text,
+  .expense-card-subtext,
+  .input-titles,
+  .input-titles-expenses,
+  .category-btn,
+  .category-btn.hidden,
+  .graph-container {
+    font-size: 0.7rem;
+  }
+  .action-button {
+    font-size: 0.7rem;
+  }
+  .expense-dashboard-recurring > .card-element.category {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* @media only screen and (max-width: 700px) {
+  .card-element,
+  .expense-card-text,
+  .expense-card-subtext {
+    font-size: 0.6rem;
+  }
+} */
+
+@media only screen and (max-width: 460px) {
+  .card-element,
+  .expense-card-text,
+  .expense-card-subtext {
+    font-size: 0.45rem;
+  }
+  .category-btn,
+  .category-btn.hidden {
+    font-size: 0.5rem;
+  }
+  .expense-dashboard,
+  .expense-dashboard-recurring {
+    column-gap: 5px;
+  }
 }

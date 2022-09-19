@@ -32,7 +32,7 @@ function ExpenseCard(props) {
           </div>
         ) : props.amount ? (
           <div className="card-element amount">
-            <span className="selected-currency">{props.currency}</span>
+            <p className="selected-currency">{props.currency}</p>
             <p className="expense-card-text amount">{props.amount}</p>
           </div>
         ) : (
