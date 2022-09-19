@@ -3,15 +3,44 @@
   inset: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
 }
 
-.create-expense-form-container {
+.expense-form-container {
   position: fixed;
   left: 50%;
   right: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 580px !important;
+  /* width: 580px !important; */
+  width: 35%;
+  /* width: fit-content; */
+  /* max-width: 580px; */
+  border-radius: 20px;
+  /* padding: 20px 30px 20px; */
+  padding: 40px;
+  box-shadow: 3px -5px 35px rgba(205, 205, 212, 0.2);
+  background-color: white;
+}
+
+.create-expense-form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+  /* width: 40%; */
+
+  /* width: 100%; */
+  /* position: fixed;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: fit-content;
+
   border-radius: 20px;
   padding: 27px 40px 27px;
   box-shadow: 3px -5px 35px rgba(205, 205, 212, 0.5);
@@ -19,7 +48,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 8px;
   margin: 10px;
-  background-color: white;
+  background-color: white; */
 }
 
 .create-expense-header-container {
@@ -28,7 +57,6 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  margin: 0;
 }
 
 .create-expense-header {
@@ -56,9 +84,6 @@
   background-color: white;
   border: 1.5px solid rgba(78, 93, 120, 0.2);
   font-weight: 600;
-  /* position: relative;
-  left: 504px;
-  top: -15px; */
   cursor: pointer;
 }
 
@@ -106,6 +131,7 @@
 .checkbox label {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .checkbox-input {
@@ -122,6 +148,7 @@
   color: #4e5d78;
   opacity: 0.7;
   gap: 5px;
+  margin: 0;
 }
 
 .add-image-container {
@@ -135,8 +162,8 @@
   width: 50px;
   display: grid;
   place-items: center;
-  margin-top: 37px;
-  margin-bottom: 77px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .add-image {
@@ -149,12 +176,19 @@
   justify-content: center;
   gap: 1rem;
 }
+
 .add-expense {
-  background: #8ab106;
+  background: #c8ee44;
+  color: #1b212d;
 }
 
 .delete-expense {
   background: #8b2e2e;
+  color: #ffffff;
+}
+
+.delete-expense:active {
+  opacity: 0.7;
 }
 
 .add-expense,
@@ -164,7 +198,6 @@
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
-  color: #f2f2f2;
   height: 52px;
   cursor: pointer;
   transition: all 0.1s ease-in;
@@ -176,7 +209,7 @@
 }
 
 .add-expense:active {
-  background: #89a22e;
+  opacity: 0.7;
 }
 
 .add-expense.add-expense.disabled:active {
@@ -187,7 +220,8 @@
 /* §§§§§§ Dark mode §§§§§§ */
 /* §§§§§§§§§§§§§§§§§§§§§§§ */
 
-.create-expense-background.dark .create-expense-form-container {
+.create-expense-background.dark .create-expense-form-container,
+.create-expense-background.dark .expense-form-container {
   background-color: #282541;
 }
 
@@ -232,3 +266,23 @@
   border: 1.5px solid #ffffff;
   opacity: 0.7;
 }
+
+@media only screen and (max-width: 1030px) {
+.expense-form-container {
+  width: fit-content;
+  /* padding: 20px; */
+}
+.add-expense,
+.delete-expense {
+  font-size: 0.8rem;
+}
+}
+
+@media only screen and (max-width: 460px) {
+  .expense-form-container {
+    padding: 20px;
+  }
+  .add-image-container {
+    margin: 0;
+  }
+  }

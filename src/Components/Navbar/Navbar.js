@@ -9,7 +9,7 @@ import Logo from "../../images/Logo.svg";
 import LogoDarkM from "../../images/Logo-white.svg";
 import logoutIcon from "../../images/logout-icon.svg";
 import lightMode from "../../images/lightMode.svg";
-import darkMode from "../../images/darkMode.svg";
+import darkMode from "../../images/darkMode.png";
 import menuDark from "../../images/menuDark.svg";
 import menuLight from "../../images/menuLight.svg";
 import "./Navbar.css";
@@ -73,13 +73,22 @@ export default function Navbar(props) {
               <img src={settingsIcon} />
               Settings
             </NavLink>
+            <button onClick={props.handleDark} className="dark-btn">
+              <img
+                src={darkMode}
+                className={
+                  props.toggleDarkMode ? "toggle darkMode" : "toggle lightMode"
+                }
+              />
+              {props.toggleDarkMode ? "Dark" : "Light"}
+            </button>
           </div>
-          <button onClick={props.handleDark} className="dark-btn">
+          {/* <button onClick={props.handleDark} className="dark-btn">
             <img
               src={props.toggleDarkMode ? darkMode : lightMode}
               className="toggle"
             />
-          </button>
+          </button> */}
         </nav>
         <button className="logout-button" onClick={handleLogout}>
           <img src={logoutIcon} />
@@ -116,15 +125,18 @@ export default function Navbar(props) {
             Settings
           </NavLink>
           <section className="nav-footer">
+            <button onClick={props.handleDark} className="dark-btn">
+              <img
+                src={darkMode}
+                className={
+                  props.toggleDarkMode ? "toggle darkMode" : "toggle lightMode"
+                }
+              />
+              {props.toggleDarkMode ? "Dark" : "Light"}
+            </button>
             <button className="logout-button" onClick={handleLogout}>
               <img src={logoutIcon} />
               Log out
-            </button>
-            <button onClick={props.handleDark} className="dark-btn">
-              <img
-                src={props.toggleDarkMode ? darkMode : lightMode}
-                className="toggle"
-              />
             </button>
           </section>
         </div>

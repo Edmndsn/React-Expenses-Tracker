@@ -65,6 +65,7 @@ console.log(props.currentExpense)
           : "create-expense-background"
       }
     >
+      <div className="expense-form-container">
       <form
         className="create-expense-form-container"
         onSubmit={event => handleSubmit(event)}
@@ -187,11 +188,12 @@ console.log(props.currentExpense)
               props.handleDelete();
             }}
           >
-            Delete Expense
+            Delete
           </button>
         )}
         </div>
       </form>
+      </div>
     </section>
   );
 }
