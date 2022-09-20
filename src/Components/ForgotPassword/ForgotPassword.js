@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../images/Logo.svg";
 import Main from "../../images/Intro_img.svg";
 import vector from "../../images/Vector.svg";
-import "../../Components/Signin/signin.css"
+import "../../Components/Signin/signin.css";
 
 export default function ForgotPassword() {
   const emailRef = useRef();
@@ -15,7 +15,6 @@ export default function ForgotPassword() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-
     try {
       setMessage("");
       setErrorMessage("");
@@ -25,7 +24,6 @@ export default function ForgotPassword() {
     } catch {
       setErrorMessage("Failed to reset password");
     }
-
     setLoading(false);
   }
 
@@ -55,7 +53,7 @@ export default function ForgotPassword() {
     <div className="intro-container">
       <div className="form-half">
         <div className="form-container">
-          <img src={Logo} className="su-logo" alt="" />
+          <img src={Logo} className="su-logo" alt="maglo-logo" />
           <h1 className="title-sign">Password Reset</h1>
           <p className="details">Please enter your details.</p>
 
@@ -89,7 +87,7 @@ export default function ForgotPassword() {
             <p className="question">
               Want to return? <Link to="/signin">Sign in</Link>
             </p>
-            <img src={vector} className="fp-vector" alt="" />
+            <img src={vector} className="fp-vector" alt="vector" />
           </form>
 
           {errorMessage && <alert variant="danger">{errorMessage}</alert>}
@@ -97,7 +95,7 @@ export default function ForgotPassword() {
         </div>
       </div>
       <div className="image-half">
-        <img src={Main} alt="" className="landing-image" />
+        <img src={Main} alt="landing-image" className="landing" />
       </div>
     </div>
   );

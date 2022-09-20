@@ -8,7 +8,6 @@ import {
 } from "firebase/auth";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase-config";
-import { useAuth } from "../../Contexts/AuthContext.js";
 import Logo from "../../images/Logo.svg";
 import google from "../../images/Google.svg";
 import vector from "../../images/Vector.svg";
@@ -24,12 +23,6 @@ export default function Signin() {
     password: "",
   });
   const [errorMessage, setErrorMessage] = useState("");
-
-  useEffect(() => {
-    onAuthStateChanged(auth, currentUser => {
-      setUser(currentUser);
-    });
-  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -78,22 +71,11 @@ export default function Signin() {
       });
   }
 
-  const { forgotPassword } = useAuth();
-
-  const forgotPasswordHandler = () => {
-    console.log(userLogin.email);
-    const email = userLogin.email;
-    if (email)
-      forgotPassword(email).then(() => {
-        userLogin.email = "";
-      });
-  };
-
   return (
     <div className="intro-container">
       <div className="form-half">
         <div className="form-container">
-          <img src={Logo} className="su-logo" alt="" />
+          <img src={Logo} className="su-logo" alt="logo" />
           <h1 className="title-sign">Welcome back!</h1>
           <p className="details">Please enter your details.</p>
           <form className="form-signup">
@@ -133,18 +115,18 @@ export default function Signin() {
               Sign in
             </button>
             <button onClick={handleGoogle} className="google-btn">
-              <img src={google} alt="" />
+              <img src={google} alt="google" />
               Sign in with google
             </button>
             <p className="question">
               Don't have an account? <Link to="/signup">Sign up for free</Link>
             </p>
-            <img src={vector} className="su-vector" alt="" />
+            <img src={vector} className="su-vector" alt="vector" />
           </form>
         </div>
       </div>
       <div className="image-half">
-        <img src={Main} alt="" className="landing-image" />
+        <img src={Main} alt="" className="landing" />
       </div>
     </div>
   );

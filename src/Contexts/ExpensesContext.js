@@ -8,11 +8,8 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { subDays } from "date-fns";
-
 import { createContext, useContext, useState, useEffect } from "react";
-
 import { db } from "../firebase-config";
-
 import { useAuth } from "./AuthContext";
 
 const ExpensesContext = createContext();
@@ -32,7 +29,7 @@ export default function ExpensesProvider({ children }) {
     if (currentUser) {
       onSnapshot(expensesRef, async () => {
         const data = await getDocs(expensesRef);
-        const expensesArray = data.docs.map((doc) => doc.data());
+        const expensesArray = data.docs.map(doc => doc.data());
         setExpenses(expensesArray);
       });
     }
@@ -41,7 +38,7 @@ export default function ExpensesProvider({ children }) {
   useEffect(() => {
     if (expenses) {
       sortExpenses(sort[0], sort[1]);
-      setExpenses((prevExpenses) => [...prevExpenses]);
+      setExpenses(prevExpenses => [...prevExpenses]);
     }
   }, [sort]);
 
@@ -68,7 +65,7 @@ export default function ExpensesProvider({ children }) {
   useEffect(() => {
     if (expenses) {
       sortExpenses(sort[0], sort[1]);
-      setExpenses((prevExpenses) => [...prevExpenses]);
+      setExpenses(prevExpenses => [...prevExpenses]);
     }
   }, [sort]);
 
@@ -111,8 +108,8 @@ export default function ExpensesProvider({ children }) {
 
   function fillAmount(dates, expenses) {
     return dates.reduce((array, date) => {
-      expenses.forEach((item) => {
-        const sameDate = array.find((newObj) => newObj.date === item.date);
+      expenses.forEach(item => {
+        const sameDate = array.find(newObj => newObj.date === item.date);
         if (item.date === date) {
           if (sameDate) {
             sameDate.amount += item.amount;
@@ -123,7 +120,7 @@ export default function ExpensesProvider({ children }) {
             });
         }
       });
-      const sameDate = array.find((newObj) => newObj.date === date);
+      const sameDate = array.find(newObj => newObj.date === date);
       if (!sameDate) {
         array.push({
           date: date,

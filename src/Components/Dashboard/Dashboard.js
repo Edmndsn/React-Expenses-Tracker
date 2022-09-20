@@ -33,8 +33,8 @@ export default function Dashboard(props) {
   );
 
   const recurringExpensesArr = expenses
-    .filter((item) => item.recurring === true)
-    .map((expense) => (
+    .filter(item => item.recurring === true)
+    .map(expense => (
       <ExpenseCard
         key={expense.invoice}
         title={expense.title}
@@ -55,7 +55,7 @@ export default function Dashboard(props) {
 
   const expensesArr = expenses
     .slice(0, 3)
-    .map((expense) => (
+    .map(expense => (
       <ExpenseCard
         key={expense.invoice}
         title={expense.title}
@@ -121,7 +121,11 @@ export default function Dashboard(props) {
                 onClick={() => navigate("expenses")}
               >
                 View All
-                <img src={expand} className="expand-icon" alt="view-all-button" />
+                <img
+                  src={expand}
+                  className="expand-icon"
+                  alt="view-all-button"
+                />
               </button>
             </div>
             <div className="filters-container">

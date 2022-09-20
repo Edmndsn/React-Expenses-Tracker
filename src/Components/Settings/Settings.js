@@ -58,7 +58,6 @@ export default function Settings(props) {
       password,
       passwordConfirm,
     } = data;
-
     if (email) {
       try {
         await updateUsersEmail(email);
@@ -140,7 +139,7 @@ export default function Settings(props) {
               e.preventDefault();
             }}
           >
-            <img src={Pen} className="pen-icon" alt="" />
+            <img src={Pen} className="pen-icon" alt="pen" />
             Edit
           </button>
         </section>
@@ -169,6 +168,7 @@ export default function Settings(props) {
                 <img
                   src={!data.photoURL ? photoURL : data.photoURL}
                   className="profile-picture"
+                  alt="display"
                 />
               )}
             </div>
@@ -226,7 +226,7 @@ export default function Settings(props) {
                   editSettings ? "mail-container-white" : "mail-container"
                 }
               >
-                <img src={Mail} className="mail-icon" alt="" />
+                <img src={Mail} className="mail-icon" alt="mail" />
                 <input
                   disabled={!editSettings}
                   className={editSettings ? "mail-input-w" : "mail-input"}
@@ -245,7 +245,7 @@ export default function Settings(props) {
                   editSettings ? "pass-container-white" : "pass-container"
                 }
               >
-                <img src={Lock} className="lock-icon" alt="" />
+                <img src={Lock} className="lock-icon" alt="lock" />
                 <input
                   disabled={!editSettings}
                   className={editSettings ? "pass-input-w" : "pass-input"}
@@ -263,7 +263,7 @@ export default function Settings(props) {
                   }}
                   className="eye-btn"
                 >
-                  <img src={Eye} className="eye-icon" alt="" />
+                  <img src={Eye} className="eye-icon" alt="eye" />
                 </button>
               </div>
             </div>
@@ -275,7 +275,7 @@ export default function Settings(props) {
                   editSettings ? "pass-container-white" : "pass-container"
                 }
               >
-                <img src={Lock} className="lock-icon" alt="" />
+                <img src={Lock} className="lock-icon" alt="lock" />
                 <input
                   disabled={!editSettings}
                   className={editSettings ? "pass-input-w" : "pass-input"}
@@ -293,7 +293,7 @@ export default function Settings(props) {
                   }}
                   className="eye-btn"
                 >
-                  <img src={Eye} className="eye-icon" alt="" />
+                  <img src={Eye} className="eye-icon" alt="eye" />
                 </button>
               </div>
               <p>{error.password}</p>

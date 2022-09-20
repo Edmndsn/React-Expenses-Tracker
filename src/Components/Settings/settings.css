@@ -5,10 +5,6 @@
   overflow-y: auto;
 }
 
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§ Main Container §§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-
 .main-container {
   margin-left: 40px;
   padding-left: 40px;
@@ -67,10 +63,6 @@
   margin-right: 0.625rem;
   cursor: pointer;
 }
-
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§ Form Container §§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
 
 .form-wrap {
   display: grid;
@@ -153,10 +145,6 @@
   cursor: pointer;
 }
 
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§§§ Mail form §§§§§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-
 .mail-container,
 .mail-container-white {
   border: 1px solid #f1f1f3;
@@ -190,10 +178,6 @@
   padding-left: 1.25rem;
   background: white;
 }
-
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§§§ Pass form §§§§§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
 
 .pass-container,
 .pass-container-white {
@@ -242,10 +226,6 @@
   opacity: 0.2;
 }
 
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§§ Update btn §§§§§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-
 .update-btn {
   color: #fff;
   height: 3.25rem;
@@ -263,10 +243,6 @@
 .update-btn:active {
   background-color: #1b6448;
 }
-
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§§§ Dark mode §§§§§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
 
 .settings-container.dark {
   color: #ffffff !important;
@@ -327,19 +303,12 @@
   color: #78778b;
 }
 
-/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§§§ Media  Queries §§§§§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
-
 @media only screen and (max-width: 1280px) {
   .main-container {
     display: flex;
     flex-direction: column;
     margin: 0px;
-
     padding: 5px 1.5rem;
-
-    /* min-width: 450px; */
   }
   .settings-container {
     overflow-y: auto;

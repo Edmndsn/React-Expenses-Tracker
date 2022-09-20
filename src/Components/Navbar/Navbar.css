@@ -61,7 +61,6 @@
   cursor: pointer;
 }
 
-
 .toggle {
   width: 20px;
   background-color: none;
@@ -95,10 +94,6 @@
   display: none;
 }
 
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§§§ Dark mode §§§§§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-
 .dark,
 .dark .desktop-version,
 .nav-container.dark > .mobile {
@@ -118,10 +113,6 @@
   font-weight: 700;
   cursor: pointer;
 }
-
-/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§§§ Media  Queries §§§§§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
 
 @media only screen and (max-width: 860px) {
   .desktop-version {

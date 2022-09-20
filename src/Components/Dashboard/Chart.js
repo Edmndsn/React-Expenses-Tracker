@@ -22,7 +22,7 @@ export default function Chart(props) {
       {
         label: "Expense",
         fill: true,
-        data: monthlyExpenses.map((item) => item.amount).reverse(),
+        data: monthlyExpenses.map(item => item.amount).reverse(),
         backgroundColor: "#363a3f",
       },
     ],

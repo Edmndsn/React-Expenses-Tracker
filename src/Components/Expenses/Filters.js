@@ -94,7 +94,9 @@ export default function Filters(props) {
         <>
           <button
             className={
-              props.displayFilters ? "category-btn recurring" : "category-btn recurring hidden"
+              props.displayFilters
+                ? "category-btn recurring"
+                : "category-btn recurring hidden"
             }
             name="recurring"
             disabled={!props.displayFilters}

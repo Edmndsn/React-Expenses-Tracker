@@ -56,7 +56,7 @@ export default function CreateExpense(props) {
       }
     }
   }
-console.log(props.currentExpense)
+  console.log(props.currentExpense);
   return (
     <section
       className={
@@ -66,133 +66,133 @@ console.log(props.currentExpense)
       }
     >
       <div className="expense-form-container">
-      <form
-        className="create-expense-form-container"
-        onSubmit={event => handleSubmit(event)}
-      >
-        <div className="create-expense-header-container">
-          <h3 className="create-expense-header">
-            {props.currentExpense ? "Edit Expense" : "Create New Expense"}
-          </h3>
-          <button
-            className="close-btn"
-            onClick={props.handleCreateExpenseModalClose}
-          >
-            X
-          </button>
-        </div>
-        <div className="form-element span-two">
-          <input
-            type="text"
-            name="title"
-            value={data.title}
-            placeholder="Name of expense"
-            maxLength="20"
-            onChange={handleChange}
-            required
-          ></input>
-        </div>
-        <div className="form-element span-two">
-          <input
-            type="text"
-            name="company"
-            value={data.company}
-            placeholder="Company"
-            maxLength="20"
-            onChange={handleChange}
-            required
-          ></input>
-        </div>
-        <div className="form-element span-two">
-          <input
-            name="amount"
-            type="number"
-            value={data.amount}
-            placeholder="Amount"
-            onChange={handleChange}
-            required
-          ></input>
-        </div>
-        <div className="form-element span-two">
-          <select
-            className="select-type"
-            name="category"
-            defaultValue={data.category}
-            onChange={handleChange}
-            required
-          >
-            <option defaultValue="" hidden>
-              Category
-            </option>
-            <option>Entertainment</option>
-            <option>Food</option>
-            <option>General</option>
-            <option>Healthcare</option>
-            <option>Household</option>
-            <option>Housing</option>
-            <option>Insurance</option>
-            <option>Investing</option>
-            <option>Mobile</option>
-            <option>Payment</option>
-            <option>Personal</option>
-            <option>Savings</option>
-            <option>Subscriptions</option>
-            <option>Transport</option>
-            <option>Withdraw</option>
-          </select>
-        </div>
-        <div className="form-element">
-          <input
-            className="form-date-input"
-            type="date"
-            name="date"
-            value={data.date}
-            min="2021-01-01"
-            max="2023-01-01"
-            onChange={handleChange}
-            required
-          ></input>
-        </div>
-        <div className="form-element checkbox">
-          <label className="checkbox-input-text">
+        <form
+          className="create-expense-form-container"
+          onSubmit={event => handleSubmit(event)}
+        >
+          <div className="create-expense-header-container">
+            <h3 className="create-expense-header">
+              {props.currentExpense ? "Edit Expense" : "Create New Expense"}
+            </h3>
+            <button
+              className="close-btn"
+              onClick={props.handleCreateExpenseModalClose}
+            >
+              X
+            </button>
+          </div>
+          <div className="form-element span-two">
             <input
-              className="checkbox-input"
-              type="checkbox"
-              name="recurring"
-              checked={data.recurring}
+              type="text"
+              name="title"
+              value={data.title}
+              placeholder="Name of expense"
+              maxLength="20"
               onChange={handleChange}
+              required
             ></input>
-            Recurring
+          </div>
+          <div className="form-element span-two">
+            <input
+              type="text"
+              name="company"
+              value={data.company}
+              placeholder="Company"
+              maxLength="20"
+              onChange={handleChange}
+              required
+            ></input>
+          </div>
+          <div className="form-element span-two">
+            <input
+              name="amount"
+              type="number"
+              value={data.amount}
+              placeholder="Amount"
+              onChange={handleChange}
+              required
+            ></input>
+          </div>
+          <div className="form-element span-two">
+            <select
+              className="select-type"
+              name="category"
+              defaultValue={data.category}
+              onChange={handleChange}
+              required
+            >
+              <option defaultValue="" hidden>
+                Category
+              </option>
+              <option>Entertainment</option>
+              <option>Food</option>
+              <option>General</option>
+              <option>Healthcare</option>
+              <option>Household</option>
+              <option>Housing</option>
+              <option>Insurance</option>
+              <option>Investing</option>
+              <option>Mobile</option>
+              <option>Payment</option>
+              <option>Personal</option>
+              <option>Savings</option>
+              <option>Subscriptions</option>
+              <option>Transport</option>
+              <option>Withdraw</option>
+            </select>
+          </div>
+          <div className="form-element">
+            <input
+              className="form-date-input"
+              type="date"
+              name="date"
+              value={data.date}
+              min="2021-01-01"
+              max="2023-01-01"
+              onChange={handleChange}
+              required
+            ></input>
+          </div>
+          <div className="form-element checkbox">
+            <label className="checkbox-input-text">
+              <input
+                className="checkbox-input"
+                type="checkbox"
+                name="recurring"
+                checked={data.recurring}
+                onChange={handleChange}
+              ></input>
+              Recurring
+            </label>
+          </div>
+          <label className="add-image-container span-two">
+            <CategoryImage key={data.id} expenseCategory={data.category} />
           </label>
-        </div>
-        <label className="add-image-container span-two">
-          <CategoryImage key={data.id} expenseCategory={data.category} />
-        </label>
 
-<div className="ce-button-container span-two">
-        {disableSubmit ? (
-          <button className="add-expense disabled" type="submit" disabled>
-            Add Expense
-          </button>
-        ) : (
-          <button className="add-expense" type="submit">
-            Add Expense
-          </button>
-        )}
-        {props.currentExpense && (
-          <button
-            className="delete-expense"
-            type="submit"
-            onClick={e => {
-              e.preventDefault();
-              props.handleDelete();
-            }}
-          >
-            Delete
-          </button>
-        )}
-        </div>
-      </form>
+          <div className="ce-button-container span-two">
+            {disableSubmit ? (
+              <button className="add-expense disabled" type="submit" disabled>
+                Add Expense
+              </button>
+            ) : (
+              <button className="add-expense" type="submit">
+                Add Expense
+              </button>
+            )}
+            {props.currentExpense && (
+              <button
+                className="delete-expense"
+                type="submit"
+                onClick={e => {
+                  e.preventDefault();
+                  props.handleDelete();
+                }}
+              >
+                Delete
+              </button>
+            )}
+          </div>
+        </form>
       </div>
     </section>
   );

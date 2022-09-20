@@ -39,6 +39,7 @@ export default function Header(props) {
               : currentUser.photoURL
           }
           className="display-picture"
+          alt="hamburger"
         />
         <h3>{`${userDetails.firstName} ${userDetails.lastName}`}</h3>
       </button>

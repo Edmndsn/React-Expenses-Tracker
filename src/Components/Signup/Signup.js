@@ -33,7 +33,6 @@ export default function Signup() {
     }));
   };
 
-  //Create a user, set a display name, create user details
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (Object.keys(errorMessage).length === 0) {
@@ -50,7 +49,6 @@ export default function Signup() {
     setLoading(false);
   };
 
-  //Check for errors and set Errors
   useEffect(() => {
     setErrorMessage({});
     if (data.password.length < 6 && data.password !== "") {
@@ -88,7 +86,7 @@ export default function Signup() {
     <div className="intro-container">
       <div className="form-half">
         <div className="form-container">
-          <img src={Logo} className="su-logo" alt="" />
+          <img src={Logo} className="su-logo" alt="logo" />
           <h1 className="title-sign">Create a new account.</h1>
           <p className="details">Please enter your details.</p>
           <form className="form-signup" onSubmit={handleSubmit}>
@@ -143,18 +141,18 @@ export default function Signup() {
               Sign up
             </button>
             <button className="google-btn" onClick={handleGoogle}>
-              <img src={google} alt="" />
+              <img src={google} alt="google" />
               Sign up with google
             </button>
             <p className="question">
               Already have an account? <Link to="/signin">Sign in</Link>
             </p>
-            <img className="su-vector" src={vector} alt="" />
+            <img className="su-vector" src={vector} alt="vector" />
           </form>
         </div>
       </div>
       <div className="image-half">
-        <img src={Main} alt="" className="landing-image" />
+        <img src={Main} alt="" className="landing" />
       </div>
     </div>
   );

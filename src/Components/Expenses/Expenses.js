@@ -190,7 +190,7 @@ export default function Expenses(props) {
         <div className="expenses-content">
           <div className="search-container">
             <div className="search-bar">
-              <img src={searchIcon} />
+              <img src={searchIcon} alt="search" />
               <input
                 className="search-input"
                 type="text"
@@ -204,7 +204,7 @@ export default function Expenses(props) {
                 className="create-expense"
                 onClick={handleCreateExpenseModalOpen}
               >
-                <img src={createExpenseIcon} />
+                <img src={createExpenseIcon} alt="create-expense"/>
                 <p>Create Expense</p>
               </button>
 
@@ -212,12 +212,12 @@ export default function Expenses(props) {
                 className="filter-expenses"
                 onClick={handleDisplayFilters}
               >
-                <img src={filterIcon} />
+                <img src={filterIcon} alt="filter-expenses"/>
                 <p>Filters</p>
               </button>
 
               <button
-                className="update-currency"
+                className="update-currency-button"
                 onClick={e => handleCurrencyUpdate(e)}
               >
                 <select

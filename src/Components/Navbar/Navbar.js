@@ -8,7 +8,6 @@ import settingsIcon from "../../images/settings-icon.svg";
 import Logo from "../../images/Logo.svg";
 import LogoDarkM from "../../images/Logo-white.svg";
 import logoutIcon from "../../images/logout-icon.svg";
-import lightMode from "../../images/lightMode.svg";
 import darkMode from "../../images/darkMode.png";
 import menuDark from "../../images/menuDark.svg";
 import menuLight from "../../images/menuLight.svg";
@@ -17,7 +16,7 @@ import "./Navbar.css";
 export default function Navbar(props) {
   const navigate = useNavigate();
 
-  const { currentUser, logout } = useAuth();
+  const { logout } = useAuth();
 
   const [error, setError] = useState("");
 
@@ -59,18 +58,22 @@ export default function Navbar(props) {
     >
       <div className="desktop-version">
         <nav>
-          <img className="logo" src={props.toggleDarkMode ? LogoDarkM : Logo} />
+          <img
+            className="logo"
+            src={props.toggleDarkMode ? LogoDarkM : Logo}
+            alt="logo"
+          />
           <div className="nav-links">
             <NavLink to="/" className="navlink-dashboard">
-              <img src={dashboardIcon} />
+              <img src={dashboardIcon} alt="dashboard-button" />
               Dashboard
             </NavLink>
             <NavLink to="/expenses" className="navlink-expenses">
-              <img src={expensesIcon} />
+              <img src={expensesIcon} alt="expenses-button" />
               Expenses
             </NavLink>
             <NavLink to="/settings" className="navlink-settings">
-              <img src={settingsIcon} />
+              <img src={settingsIcon} alt="settings-button" />
               Settings
             </NavLink>
             <button onClick={props.handleDark} className="dark-btn">
@@ -79,19 +82,14 @@ export default function Navbar(props) {
                 className={
                   props.toggleDarkMode ? "toggle darkMode" : "toggle lightMode"
                 }
+                alt="dark-mode-button"
               />
               {props.toggleDarkMode ? "Dark" : "Light"}
             </button>
           </div>
-          {/* <button onClick={props.handleDark} className="dark-btn">
-            <img
-              src={props.toggleDarkMode ? darkMode : lightMode}
-              className="toggle"
-            />
-          </button> */}
         </nav>
         <button className="logout-button" onClick={handleLogout}>
-          <img src={logoutIcon} />
+          <img src={logoutIcon} alt="logout" />
           Log out
         </button>
       </div>
@@ -99,13 +97,16 @@ export default function Navbar(props) {
       <div className="mobile">
         <section className="mobile-header">
           <button className="expand-icon" onClick={handleShow}>
-            <img src={props.toggleDarkMode ? menuDark : menuLight} />
+            <img
+              src={props.toggleDarkMode ? menuDark : menuLight}
+              alt="dark-mode-button"
+            />
           </button>
           <h2 className="title">{title}</h2>
         </section>
         <div className={showNav ? "nav-links mobile-nav" : "mobile-nav-hidden"}>
           <NavLink to="/" className="navlink-dashboard" onClick={handleShow}>
-            <img src={dashboardIcon} />
+            <img src={dashboardIcon} alt="dashboard-button" />
             Dashboard
           </NavLink>
           <NavLink
@@ -113,7 +114,7 @@ export default function Navbar(props) {
             className="navlink-expenses"
             onClick={handleShow}
           >
-            <img src={expensesIcon} />
+            <img src={expensesIcon} alt="expenses-button" />
             Expenses
           </NavLink>
           <NavLink
@@ -121,7 +122,7 @@ export default function Navbar(props) {
             className="navlink-settings"
             onClick={handleShow}
           >
-            <img src={settingsIcon} />
+            <img src={settingsIcon} alt="settings-button" />
             Settings
           </NavLink>
           <section className="nav-footer">
@@ -131,11 +132,12 @@ export default function Navbar(props) {
                 className={
                   props.toggleDarkMode ? "toggle darkMode" : "toggle lightMode"
                 }
+                alt="dark-mode-button"
               />
               {props.toggleDarkMode ? "Dark" : "Light"}
             </button>
             <button className="logout-button" onClick={handleLogout}>
-              <img src={logoutIcon} />
+              <img src={logoutIcon} alt="logout-button" />
               Log out
             </button>
           </section>

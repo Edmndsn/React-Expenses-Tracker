@@ -173,10 +173,6 @@
   margin-right: 100px;
 }
 
-/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§§§ Media  Queries §§§§§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
-
 @media only screen and (max-width: 600px) {
   .image-half {
     display: none;

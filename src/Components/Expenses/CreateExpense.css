@@ -14,12 +14,8 @@
   right: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* width: 580px !important; */
   width: 35%;
-  /* width: fit-content; */
-  /* max-width: 580px; */
   border-radius: 20px;
-  /* padding: 20px 30px 20px; */
   padding: 40px;
   box-shadow: 3px -5px 35px rgba(205, 205, 212, 0.2);
   background-color: white;
@@ -29,26 +25,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
-
-  /* width: 40%; */
-
-  /* width: 100%; */
-  /* position: fixed;
-  left: 50%;
-  right: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  width: fit-content;
-
-  border-radius: 20px;
-  padding: 27px 40px 27px;
-  box-shadow: 3px -5px 35px rgba(205, 205, 212, 0.5);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin: 10px;
-  background-color: white; */
 }
 
 .create-expense-header-container {
@@ -216,10 +192,6 @@
   background: #c8ee44;
 }
 
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§§§ Dark mode §§§§§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-
 .create-expense-background.dark .create-expense-form-container,
 .create-expense-background.dark .expense-form-container {
   background-color: #282541;
@@ -268,14 +240,13 @@
 }
 
 @media only screen and (max-width: 1030px) {
-.expense-form-container {
-  width: fit-content;
-  /* padding: 20px; */
-}
-.add-expense,
-.delete-expense {
-  font-size: 0.8rem;
-}
+  .expense-form-container {
+    width: fit-content;
+  }
+  .add-expense,
+  .delete-expense {
+    font-size: 0.8rem;
+  }
 }
 
 @media only screen and (max-width: 460px) {
@@ -285,4 +256,4 @@
   .add-image-container {
     margin: 0;
   }
-  }
+}

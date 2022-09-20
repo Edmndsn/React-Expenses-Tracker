@@ -1,10 +1,7 @@
-/* Overall div */
 .expense-card {
   place-items: left;
   font-family: "Kumbh Sans";
 }
-
-/* Expenses shown on Expenses Page */
 
 .expense-dashboard > .card-element {
   display: flex;
@@ -17,7 +14,6 @@
 
 .expense-dashboard > .card-element.name-business-container {
   gap: 0px !important;
-  /* max-width: 20ch; */
   display: flex;
   justify-content: center;
 }
@@ -30,10 +26,6 @@
 .expense-dashboard > .category > .category-image-container {
   min-width: 50px;
 }
-
-/* .expense-dashboard > .card-element.amount {
-  border: none;
-} */
 
 .expense-dashboard > .card-element > .selected-currency,
 .expense-dashboard > .card-element > .input {
@@ -52,7 +44,6 @@
   min-width: fit-content;
 }
 
-/* Reccuring expenses shown on Dashboard Page */
 .expense-dashboard-recurring {
   display: grid;
   grid-template-columns: 1.25fr 0.5fr 1fr;
@@ -75,15 +66,6 @@
   height: 50px;
 }
 
-/* .selected-currency-span {
-  width: 10px;
-} */
-
-/* .expense-dashboard-recurring > .card-element.name-business-container {
-  gap: 0px !important;
-  width: 20ch;
-} */
-
 .expense-dashboard-recurring > .category > .category-image-container {
   min-width: 50px;
 }
@@ -92,12 +74,7 @@
 }
 
 .expense-dashboard-recurring > .card-element.amount.recurring {
-  /* width: 10ch; */
   justify-content: flex-end;
-}
-
-.expense-dashboard-recurring > .selected-currency {
-  /* width: 10ch; */
 }
 
 .expense-dashboard-recurring > .card-element > .expense-card-text,
@@ -105,21 +82,12 @@
   padding-left: 0px !important;
 }
 
-/* .edit {
-  border: none;
-  background: rgba(119, 119, 119, 0.1);
-  border-radius: 5px;
-} */
-
 .card-element {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   border: none;
   outline: none;
-  /* gap: 10px; */
   height: 40px;
-  /* min-width: 100%; */
   width: 100%;
 }
 
@@ -229,10 +197,6 @@
   background: #89a22e;
 }
 
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-/* §§§§§§ Dark mode §§§§§§ */
-/* §§§§§§§§§§§§§§§§§§§§§§§ */
-
 .dark .card-element,
 .dark .expense-card-text,
 .dark .expense-card-subtext,
@@ -278,14 +242,6 @@
     width: 40px;
   }
 }
-
-/* @media only screen and (max-width: 700px) {
-  .card-element,
-  .expense-card-text,
-  .expense-card-subtext {
-    font-size: 0.6rem;
-  }
-} */
 
 @media only screen and (max-width: 500px) {
   .card-element,
