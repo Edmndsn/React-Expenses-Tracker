@@ -64,7 +64,7 @@ function ExpenseCard(props) {
             <button
               type="button"
               className="action-button"
-              onClick={(event) => props.edit(event, props.invoice)}
+              onClick={event => props.edit(event, props.invoice)}
             >
               Edit
             </button>

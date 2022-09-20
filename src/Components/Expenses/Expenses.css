@@ -224,7 +224,7 @@
   .expenses-content {
     margin: 5px 1.5rem;
   }
-  ..category-btn.hidden,
+  .category-btn.hidden,
   .category-btn {
     font-size: 12px;
   }
@@ -240,11 +240,9 @@
     column-gap: 5px;
     flex-shrink: 1;
   }
-
   .card-element.button-container {
     padding-left: 10px;
   }
-
   .expense-card-text.category {
     display: none;
   }

@@ -296,6 +296,7 @@
   .category-btn,
   .category-btn.hidden {
     font-size: 0.5rem;
+    background-color: black;
   }
   .expense-dashboard,
   .expense-dashboard-recurring {
