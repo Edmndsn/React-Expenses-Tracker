@@ -287,6 +287,23 @@
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .card-element,
+  .expense-card-text,
+  .expense-card-subtext {
+    font-size: 0.45rem;
+  }
+  .category-btn,
+  .category-btn.hidden {
+    font-size: 0.5rem;
+
+  }
+  .expense-dashboard,
+  .expense-dashboard-recurring {
+    column-gap: 5px;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .expense-buttons p {
     display: none;
