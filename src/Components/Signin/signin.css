@@ -1,194 +1,194 @@
 .intro-container {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  min-width: 100%;
-  min-height: 100%;
+	display: grid;
+	grid-template-columns: 1.4fr 1fr;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 .form-half {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 .image-half {
-  object-fit: cover;
-  width: 100%;
-  min-height: 100%;
+	object-fit: cover;
+	width: 100%;
+	min-height: 100%;
 }
 
-.landing-image {
-  float: right;
-  height: 100%;
+.landing {
+	float: right;
+	height: 100%;
 }
 
 .form-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 40px 15px;
-  height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 40px 15px;
+	height: 100%;
 }
 
 .title-sign {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #1b212d;
-  line-height: 37px;
-  margin-top: 90px;
+	font-size: 2rem;
+	font-weight: 600;
+	color: #1b212d;
+	line-height: 37px;
+	margin-top: 90px;
 }
 
 .details {
-  color: #78778b;
-  font-weight: 400;
-  font-size: 1rem;
-  margin-top: 8px;
-  margin-bottom: 25px;
-  line-height: 20px;
+	color: #78778b;
+	font-weight: 400;
+	font-size: 1rem;
+	margin-top: 8px;
+	margin-bottom: 25px;
+	line-height: 20px;
 }
 
 .form-signup {
-  display: flex;
-  flex-direction: column;
-  color: #1b212d;
-  font-size: 0.9rem;
-  font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	color: #1b212d;
+	font-size: 0.9rem;
+	font-weight: 500;
 }
 
 .su-logo {
-  width: 122px;
+	width: 122px;
 }
 
 .label-container {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .errorMessage {
-  color: rgb(243, 99, 99);
+	color: rgb(243, 99, 99);
 }
 
 .details-input {
-  border: 1px solid #f2f2f2;
-  border-radius: 10px;
-  height: 50px;
-  padding-left: 20px;
-  width: 400px;
-  margin-bottom: 14px;
+	border: 1px solid #f2f2f2;
+	border-radius: 10px;
+	height: 50px;
+	padding-left: 20px;
+	width: 400px;
+	margin-bottom: 14px;
 }
 
 .options-section {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  gap: 1rem;
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	gap: 1rem;
 }
 
 .options-section label {
-  margin-bottom: 0px !important;
+	margin-bottom: 0px !important;
 }
 
 .options-checkbox {
-  display: flex;
-  accent-color: #4e5d78;
+	display: flex;
+	accent-color: #4e5d78;
 }
 
 .remember-label {
-  margin-left: 9px;
+	margin-left: 9px;
 }
 
 .forgot-password {
-  cursor: pointer;
-  transition: all 0.1s ease-in;
+	cursor: pointer;
+	transition: all 0.1s ease-in;
 }
 
 .forgot-password:active {
-  opacity: 0.7;
+	opacity: 0.7;
 }
 
 .sign-btn {
-  background-color: #c8ee44;
-  border: none;
-  border-radius: 10px;
-  color: #1b212d;
-  font-weight: 600;
-  height: 48px;
-  width: 400px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  transition: all 0.1s ease-in;
-  cursor: pointer;
+	background-color: #c8ee44;
+	border: none;
+	border-radius: 10px;
+	color: #1b212d;
+	font-weight: 600;
+	height: 48px;
+	width: 400px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	transition: all 0.1s ease-in;
+	cursor: pointer;
 }
 
 .sign-btn:active {
-  background: #89a22e;
+	background: #89a22e;
 }
 
 .google-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border: 1px solid #f5f5f5;
-  border-radius: 10px;
-  height: 48px;
-  margin-bottom: 25px;
-  gap: 10px;
-  font-weight: 600;
-  color: #78778b;
-  cursor: pointer;
-  transition: all 0.1s ease-in;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	border: 1px solid #f5f5f5;
+	border-radius: 10px;
+	height: 48px;
+	margin-bottom: 25px;
+	gap: 10px;
+	font-weight: 600;
+	color: #78778b;
+	cursor: pointer;
+	transition: all 0.1s ease-in;
 }
 
 .google-btn:active {
-  opacity: 0.5;
+	opacity: 0.5;
 }
 
 .question {
-  text-align: center;
-  color: #929ea3;
-  font-size: 0.9rem;
-  font-weight: 400;
-  transition: all 0.1s ease-in;
-  cursor: pointer;
+	text-align: center;
+	color: #929ea3;
+	font-size: 0.9rem;
+	font-weight: 400;
+	transition: all 0.1s ease-in;
+	cursor: pointer;
 }
 
 .question:active {
-  opacity: 0.5;
+	opacity: 0.5;
 }
 
 .su-vector {
-  width: 96px;
-  align-self: flex-end;
-  margin-top: 10px;
-  margin-right: 70px;
+	width: 96px;
+	align-self: flex-end;
+	margin-top: 10px;
+	margin-right: 70px;
 }
 
 .fp-vector {
-  width: 96px;
-  align-self: flex-end;
-  margin-top: 10px;
-  margin-right: 100px;
+	width: 96px;
+	align-self: flex-end;
+	margin-top: 10px;
+	margin-right: 100px;
 }
 
 @media only screen and (max-width: 600px) {
-  .image-half {
-    display: none;
-  }
-  .intro-container {
-    display: flex;
-    justify-content: center;
-  }
-  .details-input,
-  .sign-btn {
-    width: auto;
-  }
-  .su-vector {
-    margin-right: 25px;
-  }
-  .fp-vector {
-    margin-right: 10px;
-  }
+	.image-half {
+		display: none;
+	}
+	.intro-container {
+		display: flex;
+		justify-content: center;
+	}
+	.details-input,
+	.sign-btn {
+		width: auto;
+	}
+	.su-vector {
+		margin-right: 25px;
+	}
+	.fp-vector {
+		margin-right: 10px;
+	}
 }
