@@ -1,32 +1,33 @@
 * {
-  box-sizing: border-box;
-  font-family: "Kumbh Sans";
+	box-sizing: border-box;
+	font-family: "Kumbh Sans";
 }
 
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 input {
-  outline: none;
+	outline: none;
 }
 
 label {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 a {
-  text-decoration: none;
-  color: #1b212d;
-  font-weight: 500;
+	text-decoration: none;
+	color: #1b212d;
+	font-weight: 500;
 }
 
 .App {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  overflow-y: auto;
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	overflow-y: auto;
+	min-width: 340px;
 }
 
 /* §§§§§§§§§§§§§§§§§§§§§§§ */
@@ -34,19 +35,19 @@ a {
 /* §§§§§§§§§§§§§§§§§§§§§§§ */
 
 .dark ::-webkit-calendar-picker-indicator {
-  color-scheme: dark;
+	color-scheme: dark;
 }
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 /* Firefox */
 input[type="number"] {
-  -moz-appearance: textfield;
+	-moz-appearance: textfield;
 }
 
 /* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
@@ -54,8 +55,8 @@ input[type="number"] {
 /* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
 
 @media only screen and (max-width: 860px) {
-  .App {
-    display: flex;
-    flex-direction: column;
-  }
+	.App {
+		display: flex;
+		flex-direction: column;
+	}
 }
